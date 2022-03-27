@@ -1,3 +1,4 @@
 from django.contrib import admin
+from twoapp.models import Building
 
-# Register your models here.
+admin.site.register(Building)

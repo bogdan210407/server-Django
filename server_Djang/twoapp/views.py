@@ -1,3 +1,3 @@
 from django.shortcuts import render
-
-# Create your views here.
+def buildPage(request):
+    return render (request, "buildings.html")

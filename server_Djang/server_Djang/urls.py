@@ -4,10 +4,12 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 from welcomeApp.views import initPage, aboutPage
+from twoapp.views import buildPage
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', initPage),
-    path('about/', aboutPage, name="about_path" )
+    path('about/', aboutPage, name="about_path" ),
+    path('buildings/', buildPage, name = "buildscan")
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
