@@ -1,10 +1,29 @@
 <html>
     <head>
         {% load static %}
+        <style>
+        button {
+            height: 100px;
+            width: 350px;
+            background: #4169E1; 
+            color: #fff; 
+            border: none; 
+            padding: 1rem 1rem; 
+            margin-bottom: 1rem;
+              
+           }
+           </style>
     </head>
     <body style="background: #D3D3D3">
        <p>
-        <img src="{%static 'buildWood.png'%}" width="1000" height="500">
+        <img style="padding: 25px;" src="{%static 'Wood.png'%}" width="350" height="350" >
+        <img style="padding: 25px;" src="{%static 'Stone.png'%}" width="350" height="350" >
+        <img style="padding: 25px;" src="{%static 'Metall.png'%}" width="350" height="350" >
+        <img style="padding: 25px;" src="{%static 'BMetall.png'%}" width="350" height="350" >
+        <a  href="{%url 'buildscan' %}"><button ><h1>Деревянные постройки</h1></button></a>
+        <a  href="{%url 'buildscan' %}"><button><h1>Каменные постройки</h1></button></a>
+        <a  href="{%url 'buildscan' %}"><button><h1>Металлические постройки</h1></button></a>
+        <a  href="{%url 'buildscan' %}"><button><h1>Броне-Металлические постройки</h1></button></a>
        </p>
     </body>
 </html>
