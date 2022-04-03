@@ -2,28 +2,14 @@
     <head>
         {% load static %}
         <style>
-        button {
-            height: 100px;
-            width: 350px;
-            background: #4169E1; 
-            color: #fff; 
-            border: none; 
-            padding: 1rem 1rem; 
-            margin-bottom: 1rem;
-              
-           }
-           </style>
+
+        </style>
     </head>
     <body style="background: #D3D3D3">
-       <p>
-        <img style="padding: 25px;" src="{%static 'Wood.png'%}" width="350" height="350" >
-        <img style="padding: 25px;" src="{%static 'Stone.png'%}" width="350" height="350" >
-        <img style="padding: 25px;" src="{%static 'Metall.png'%}" width="350" height="350" >
-        <img style="padding: 25px;" src="{%static 'BMetall.png'%}" width="350" height="350" >
-        <a  href="{%url 'buildscan' %}"><button ><h1>Деревянные постройки</h1></button></a>
-        <a  href="{%url 'buildscan' %}"><button><h1>Каменные постройки</h1></button></a>
-        <a  href="{%url 'buildscan' %}"><button><h1>Металлические постройки</h1></button></a>
-        <a  href="{%url 'buildscan' %}"><button><h1>Броне-Металлические постройки</h1></button></a>
-       </p>
+        <p style="text-align: center;"><img src="{% static 'fone.png'%}" alt="img" width="600"></p>
+           <h1 style="text-align: center;" > <font color=#FF4500><big>Виды построек:</big></font></h1>
+           {% for current in build %}
+           <a href="{% url 'current' %}"><h2><font color=#2F4F4F><big>{{ current.namename }}</big></h2></font></a>
+           {% endfor %}
     </body>
 </html>
