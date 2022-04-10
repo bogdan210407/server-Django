@@ -1,15 +1,15 @@
 <html>
     <head>
         {% load static %}
-        <style>
+    <style>
 
-        </style>
+    </style>
     </head>
     <body style="background: #D3D3D3">
         <p style="text-align: center;"><img src="{% static 'fone.png'%}" alt="img" width="600"></p>
            <h1 style="text-align: center;" > <font color=#FF4500><big>Виды построек:</big></font></h1>
            {% for current in build %}
-           <a href="{% url 'current' %}"><h2><font color=#2F4F4F><big>{{ current.namename }}</big></h2></font></a>
+           <a href="{% url 'current' buildName=current.namename %}"><h2><font color=#2F4F4F><big>{{ current.namename }}</big></h2></font></a>
            {% endfor %}
     </body>
 </html>

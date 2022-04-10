@@ -10,7 +10,8 @@ urlpatterns = [
     path('', initPage),
     path('about/', aboutPage, name="about_path" ),
     path('buildings/', buildPage, name = "buildscan"),
-    path('build/', CurrentBuild, name = "current")
+    path('build/<str:buildName>', CurrentBuild, name = "current")
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

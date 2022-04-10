@@ -1,0 +1,10 @@
+<html>
+    <head>
+        {% load static %}
+    </head>
+    <body style="background: #D3D3D3">
+        <p style="text-align: center;"><img src="{% static 'fone.png'%}" alt="img" width="600"></p>
+        <h1>{{ key_build.namename }}</h1>
+        <img src="{{ key_build.avatar.url }}" />
+    </body>
+</html>
